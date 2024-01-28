@@ -1,0 +1,163 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #013751, #052C49);
+  position: relative;
+  overflow: hidden;
+  @include desktopmini{
+
+    height: calc(100vh - 50px);
+  }
+
+  
+  .particle{
+    overflow: hidden;
+
+  }
+// #tsparticles{
+
+//   height:calc(100vh - 100px) ;
+// }
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    @include desktopmini{
+    
+      margin-left: 80px;
+    
+    }
+  
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+
+      @include desktopmini{
+        gap:20px;
+      }
+      
+
+
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+      @include mp{
+        gap:10px;
+        width: 80%;
+  
+        
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color:rgb(163, 48, 71);
+        letter-spacing: 10px;
+        @include mobile{
+          font-size: 20px;
+        }
+        @include mp{
+          font-size: 20px;
+          margin-top: 0px;
+          letter-spacing: 4px;
+          
+        }
+      }
+
+      h1 {
+        font-size: 88px;
+        @include desktopmini{
+          font-size:64px ;
+        
+        }
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      .buttons {
+        button {
+          padding: 15px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+          @include desktopmini{
+        
+          padding: 10px;
+          margin-right: 10px;
+          border-radius: 5px;
+        
+          }
+          @include mp{
+            padding: 7px;
+          }
+        }
+       
+        button:hover{
+          background-color: rgb(7, 14, 13);
+          color: white;
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+      @include desktopmini{}
+    }
+  }
+
+  .imageContainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include mp{
+      left: 40px;
+      top: unset;
+      bottom: 0;
+    }
+
+    @include mobile {
+      height: 50%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+    @include mp{
+      font-size: 30vh;
+      bottom: -70px;
+    }
+  }
+}

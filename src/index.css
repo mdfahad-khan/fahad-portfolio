@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .shadow-red-and-blue {
+      box-shadow: 0 0 10px 0px rgb(230, 174, 174), 0 0 20px 5px rgb(155, 155, 218);
+    }
+  }
+
+  @screen mp {
+    .custom-mp {
+     margin-left: 50px;
+    }
+  }
